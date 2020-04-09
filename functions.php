@@ -2,6 +2,7 @@
 
 require get_template_directory() . "/include/setup.php";
 require_once get_template_directory() . "/class-wp-bootstrap-navwalker.php";
+require get_template_directory() . "./include/customizer/theme-customizer.php";
 
 
 if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.php' ) ) {
@@ -13,5 +14,12 @@ if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.ph
 }
 
 add_action('wp_enqueue_scripts','rs_theme_styles');
-// add_action('after_setup_theme','rs_theme_setup');
-// add_action('widgets_init','rs_widgets');
+add_action('after_setup_theme','rs_theme_setup');
+add_action('widgets_init','rs_widgets');
+
+/*
+ 1- SETTING = ARMAZENAMENTO NO BANDO DE DADOS
+ 2- SECTIONS = GRUPO DAS PROPRIEDADES
+ 3- CONTROLES = AS PROPRIEDADES
+*/
+add_action('customize_register', 'rs_customize_register');
