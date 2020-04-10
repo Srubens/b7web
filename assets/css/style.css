@@ -13,11 +13,13 @@
 	--btn-blue: #9fafe0;
 	--gray: #e3e3e3;
 	--white: #fff;
+	--bg-footer: #455482;
 }
 
 img{
 	display: block;
 	max-width: 100%;
+	height: auto;
 }
 
 img a{ 	border:none; }
@@ -96,6 +98,21 @@ iframe[style]{
 	max-width: 100%;
 	display: flex;
 	position: relative;
+}
+
+.main_header_optional{
+	margin-bottom: 20px; 
+	background: url(../images/bg.jpg);
+	width: 1540px;
+	height: 350px;
+	max-width: 100%;
+	display: flex;
+	position: relative;
+}
+
+.header{
+	margin: 60px auto;
+	color: var(--white);
 }
 
 .box_image img{
@@ -192,13 +209,40 @@ p a:hover{
 	margin: 30px auto;
 }
 
-
 /*FOOTER*/
+
+.cursos_footer{
+	height: auto;
+	width: 100%;
+	background: var(--bg-footer);
+	padding: 0;
+	margin-top: 30px;
+	padding: 20px;
+}
+
+.header_footer h3{
+	color: var(--white);
+	margin-bottom: 10px;
+}
+
+.cursos_footer h5{
+	margin-top: 20px;
+}
+
+h5 a{
+	color: var(--white);
+	text-decoration: none;
+}
+
+h5 a:hover{
+	text-decoration: none;
+	color: #000;
+}
+
 .footer{
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
-	margin-top: 110px;
 	background: var(--gray);
 }
 
@@ -209,7 +253,7 @@ p a:hover{
 .topo{
 	position: absolute;
 	right: 15px;
-	margin-top: 54px;
+	margin-top: -20px;
 }
 
 @media (max-width: 730px){
@@ -249,7 +293,7 @@ p a:hover{
 	}
 
 	.box_image img{
-		margin-top: 25px;
+		margin-top: -40px;
 	}
 
 	.header_text{

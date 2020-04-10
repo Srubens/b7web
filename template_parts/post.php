@@ -5,7 +5,6 @@
                 <?php if( has_post_thumbnail() ){ ?>
                     <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large',array('class' => 'post_thumb') ); ?></a>
                 <?php } ?>
-    			<!-- <img src="<?php bloginfo('template_directory'); ?>/assets/images/img-01.jpg" alt="image"> -->
     		</div>
         </div>
         <div class="col-md-6">

@@ -35,18 +35,56 @@
 				           	 	</p>
 							</div>
 
-							<div class="single_comments">
-								<p>
-				           	 		<!-- COMMENTARIOS 
-				           	 			0 comentarios um comentario ou % comentarios -->
-				           	 		<?php comments_number(''); ?>
-				           	 	</p>
-							</div>
-
 	   					</article>
 		   			<?php } ?>
 	   			<?php } ?>
 
+		
+				<div class="single_comments">
+					<p>
+	           	 		<!-- COMMENTARIOS 
+	           	 			0 comentarios um comentario ou % comentarios -->
+	           	 		<?php comments_number(''); ?>
+	           	 	</p>
+				</div>
+
+
+				<?php 
+                       
+                   /* IMPORTANTE */
+       	 	 	   wp_reset_postdata();
+       	 	 	   
+                   // COLOCANDO A FUNÇÃO COMENTARIOS 					   
+					if( comments_open() ){
+				   	  comments_template();
+				    }
+                  
+   				 ?>
+
+   				<div class="row">
+   					<div class="col-md-12">
+   						<header>Outros Posts:</header>
+   					</div>
+					<?php 
+                       
+                       $categories = get_the_category();
+                       $rs_query = new WP_Query(array(
+                       	'posts_per_page' => 4,
+                       	'post__not_in' => array( $post->ID ),
+                       	'cat' => $categories[0]->term_id
+                       ));
+
+                       if( $rs_query->have_posts() ){
+                       	  while( $rs_query->have_posts() ){
+                       	  	   $rs_query->the_post();
+                       	  	   get_template_part('template_parts/related_post');
+                       	  }
+                       }
+
+                       wp_reset_postdata();
+
+					?>
+				</div>
 
 			</div>
 		

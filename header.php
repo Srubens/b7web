@@ -81,6 +81,8 @@
 	<?php
 	   if(is_home()){ 
 		   get_template_part('template_parts/banner_header');
-	   } 
+	   }else{
+	   	   get_template_part('template_parts/banner-optional');
+	   }
 	?>
     
