@@ -188,6 +188,10 @@ p a:hover{
 	margin-left: 0px;
 }
 
+.loadmore{
+	margin: 30px auto;
+}
+
 
 /*FOOTER*/
 .footer{
@@ -200,6 +204,12 @@ p a:hover{
 
 .footer p{
 	margin-top: 15px;
+}
+
+.topo{
+	position: absolute;
+	right: 15px;
+	margin-top: 54px;
 }
 
 @media (max-width: 730px){

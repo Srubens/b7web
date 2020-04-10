@@ -3,6 +3,7 @@
 require get_template_directory() . "/include/setup.php";
 require_once get_template_directory() . "/class-wp-bootstrap-navwalker.php";
 require get_template_directory() . "./include/customizer/theme-customizer.php";
+require get_template_directory() . "./include/ajax.php";
 
 
 if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.php' ) ) {

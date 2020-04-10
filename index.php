@@ -58,20 +58,22 @@
     		<div class="row">
 
     			<div class="col-md-12">
+					
+					<div class="article_box">
+	    				<?php if(have_posts()){ ?>
+		   					<?php while(have_posts()){ ?>
 
-    				<?php if(have_posts()){ ?>
-	   					<?php while(have_posts()){ ?>
+		   						<?php the_post(); ?>
 
-	   						<?php the_post(); ?>
-
-	   						<?php get_template_part('template_parts/post') ?>
-		   				
+		   						<?php get_template_part('template_parts/post') ?>
+			   				
+			   				<?php } ?>
 		   				<?php } ?>
-	   				<?php } ?>
-
-	   				<div class="">Carregar Mais</div>
+	   				</div>
 
     			</div>
+
+    			<div class="loadmore jload btn btn-btnblue">Carregar Mais</div>
     		
     		</div>
     	</div>
