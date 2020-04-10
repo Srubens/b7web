@@ -75,7 +75,7 @@ iframe[style]{
 
 /*TEXTO DO MENU SUPERIOR*/
 .nav-item a{
-	color: var(--blue-text) !important;
+	color: var(--blue-text);
 	text-transform: uppercase;
 }
 
